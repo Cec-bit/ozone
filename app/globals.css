@@ -10,18 +10,41 @@ body {
 .headings {
   font-size: 3rem; 
   text-decoration-line: underline;
-  text-decoration-color: #12ef11;
+  text-decoration-color: #009100;
 }
 
+@media (max-width: 615px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 770px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 1500px) {
+  html {
+    font-size: 57.25%;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /*NavBar */
 nav {
-  background-color: #12ef11;
+  background-color: #009100;
   color: white;
   padding: 1rem; /* Size of banner */
   position: fixed;
@@ -44,17 +67,21 @@ nav {
   margin: 0 10px;
   font-size: 1.5rem; 
   font-family: "Georgia";
+  text-shadow: 2px 2px 4px #000000;
 }
 .nav a:hover {
   color: black;
 }
 
+
 /*Home Section */
 #Home {
+  margin-top: 5rem;
   display: flex;
   align-items: center;
-  margin-top: 5rem;
-
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 @media (max-width: 440px) {
   #Home {
@@ -67,16 +94,45 @@ nav {
   height: auto;
   border-radius: 50%;
   margin-left: 1rem;
+  box-shadow: 0 0 10px rgba(184, 245, 200, 0.8);
 }
-/* About */
+.slideshow-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  overflow: hidden;
+}
+.haircuts {
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+  transition: opacity 1s ease-in-out;
+  width: 500px;
+  height: 500px; 
+}
+
+
+/* Location */
+#Location {
+  margin-top: 5rem;
+  background-image: url('/OutsideShop.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 
 /* Services */
+#Services {
+  margin-top: 5rem;
+}
 
 
 /* Footer */
 #Footer {
-  background-color: #12ef11;
+  background-color: #009100;
   color: white;
   padding: 1rem; 
   bottom: 0;

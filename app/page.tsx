@@ -2,6 +2,7 @@ import Link from 'next/link'; {/*For Icons and Portfolio Links*/}
 import NavBar from './components/NavBar';
 import Layout from '../app/layout';
 import ContactForm from '../app/components/ContactForm';
+import Slideshow from '../app/components/Slider';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -13,14 +14,22 @@ export default function Home() {
       {/*Home Section*/}
       <section id='Home'>
         <img id='homephoto' src="OZoneLogo.jpg"/>
-        <h2 className='headings'>Home</h2>
+
+        <div><Slideshow/></div>
+
       </section>
 
-      {/*About Section*/}
-
+      {/*Location Section*/}
+      <section id='Location'>
+        <h2 className='headings'>4201 Plantation Road NE Roanoke VA 24012</h2>
+      </section>
 
 
       {/*Services Section*/}
+      <section id='Services'>
+        <h2 className='headings'>Services</h2>
+        {/*Detail Services etc.*/}
+      </section>
 
 
       {/*Contact Section*/}

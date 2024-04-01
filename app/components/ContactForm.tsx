@@ -31,7 +31,7 @@ function ContactForm() {
     <section className='Contact' id='Contact'>
     <h2 className='headings'>Contact</h2>
     <div className='contact-text'>
-        <p>Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.</p>
+        <p>Have a question or want to book an appointment? Leave your details and I'll get back to you as soon as possible.</p>
     </div>
 
     <form className="contact-form" onSubmit={handleSubmit}>

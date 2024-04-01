@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Compose email
         const mailOptions = {
             from: 'contactdigital365@gmail.com',
-            to: 'cecil707@outlook.com',
+            to: '', // Need OJ email
             subject: 'New Contact Form Submission',
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         };
