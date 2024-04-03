@@ -26,7 +26,7 @@ const goToPrevious = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(goToNext, 10000);
+    const interval = setInterval(goToNext, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,7 +35,7 @@ const goToPrevious = () => {
     <div className="slideshow-container">
       <button className="prev" onClick={goToPrevious}>&#10094;</button>
       <div className='haircuts'>
-      <img src={images[currentIndex]} alt="Slideshow"/>
+        <img src={images[currentIndex]} alt="Slideshow"/>
       </div>
       <button className="next" onClick={goToNext}>&#10095;</button>
     </div>

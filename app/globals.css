@@ -1,18 +1,28 @@
+/* General Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+/* HTML Styles */
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+/* Body Styles */
 body {
-  background-color: black;
-  font-family: "Georgia";
+  background-color: #0f0f0f;
+  font-family: "Georgia", serif; /* Added serif as fallback font */
   color: white;
 }
+/* Headings Styles */
 .headings {
-  font-size: 3rem; 
-  text-decoration-line: underline;
+  font-size: 3rem;
+  text-decoration: underline; /* Simplified text-decoration property */
   text-decoration-color: #009100;
 }
 
+/* Media Queries */
 @media (max-width: 615px) {
   html {
     font-size: 40%;
@@ -33,17 +43,16 @@ body {
     font-size: 57.25%;
   }
 }
+/* Utilities Layer */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
+
 
 /*NavBar */
-nav {
+.nav {
   background-color: #009100;
   color: white;
   padding: 1rem; /* Size of banner */
@@ -80,33 +89,79 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (max-width: 820px) {
+  #Home {
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .homephoto {
+    max-width: 50%;
+  }
+  .home-heading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .haircuts {
+    width: 2em;
+    height: 20%;
+  }
 }
 @media (max-width: 440px) {
   #Home {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 }
-#homephoto {
+
+.homephoto {
   width: 100%;
   max-width: 20%;
   height: auto;
   border-radius: 50%;
-  margin-left: 1rem;
-  box-shadow: 0 0 10px rgba(184, 245, 200, 0.8);
+}
+.home-header {
+  justify-content: center; 
+  align-items: center;
+}
+.home-heading {
+  font-size: 2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .slideshow-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center; 
   align-items: center;
   overflow: hidden;
+  width: 100vw;
+  max-width: 1200px; 
+  max-height: 630px;
 }
 .haircuts {
-  object-fit: cover; /* Ensure images maintain aspect ratio */
   transition: opacity 1s ease-in-out;
-  width: 500px;
-  height: 500px; 
+  object-fit: contain;
+  width: auto;
+  height: auto;
+  max-width: 100%; 
+  max-height: 100%;
+}
+.prev {
+  background-color: #009100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+.next {
+  background-color: #009100;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 
@@ -121,12 +176,94 @@ nav {
   padding-bottom: 200px;
   background-repeat: no-repeat;
   background-position: center;
+  text-shadow: 1px 1px 2px black;
 }
 
 
 /* Services */
 #Services {
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.services-content {
+  padding: 0;
+  list-style: none;
+}
+.services-content li {
+  padding: 2rem;
+  width: 100%; 
+  font-size: 1.5rem;
+  text-align: left; 
+  border-bottom: 1px solid #e0e0e0;
+}
+.service-category {
+  margin-bottom: 2rem; 
+}
+.service-title {
+  font-weight: bold;
+}
+
+
+/*Contact Section */
+#Contact {
+  display: flex;
+  margin-top: 5rem;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  margin-bottom: 10rem;
+}
+.contact-text {
+  margin-top: 5rem;
+  font-size: 1.5rem; 
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .contact {
+    width: 100%; /* Adjust as needed */
+
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+.contact-form-name, .contact-form-email, .contact-message {
+  margin-bottom: 10px;
+  padding: 1rem;
+  height: 4rem;
+  background-color: #282828;
+}
+.contact-message {
+  height: 12rem;
+  padding: 2rem;
+}
+.contact-submit {
+  margin-top: 1rem;
+  padding: 0rem 1rem; 
+  background-color: #333; 
+  color: white;
+  cursor: pointer;
+}
+.contact-submit:hover {
+  color: #b8f5c8; 
 }
 
 
@@ -146,4 +283,5 @@ nav {
 }
 .footer-info {
   color: black;
+  font-weight: 1000;
 }
